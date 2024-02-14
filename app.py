@@ -1,9 +1,7 @@
-from models.busca_cep import Cep
+from models.menu import Menu
 
 def main():
-    cep = str(input('Digite seu cep: '))
-    resolve = Cep.busca_cep(cep)
-    print(resolve)
+    Menu.exibir_menu()
 
 if __name__ == '__main__':
     main()
