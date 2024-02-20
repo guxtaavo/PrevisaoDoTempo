@@ -1,16 +1,16 @@
 from models.busca_cep import Cep
+from models.weather import Clima
 import os
 
 class Menu:
     
-    def _mostrar_mensagem_inicial():
+    def _mostrar_mensagem_inicial(self) -> None:
         os.system('cls')
         print('----Olá, seja bem-vindx!!----')
         msg = 'ＢｉｔＴｅｍｐｏ'
-        msg = msg.center(20)
-        print(msg)
+        print(msg.center(20))
 
-    def _valida_a_opcao(opcao):
+    def _valida_a_opcao(self, opcao):
         while True:
             if opcao in [1, 2]:
                 if opcao == 1:
@@ -22,19 +22,22 @@ class Menu:
             else:
                 opcao = int(input('Você digitou um número inválido, tente novamente: '))
 
-    def _mostrar_opcoes():
+    def _mostrar_opcoes(self):
         print('\n1. Prosseguir ')
         print('2. Sair ')
         try:
             opcao = int(input('Digite a opção escolhida: '))
-            retorno = Menu._valida_a_opcao(opcao)
+            retorno = self._valida_a_opcao(opcao)
             if retorno:
-                cep = Cep.busca_cep()
-                print(cep.get('cep', 'Erro na requisição'))
+                dados_cep = Cep.busca_cep()
+                print(dados_cep.get('cep', 'Erro na requisição'))
+                localidade = dados_cep['localidade']
+                Clima.buscar_o_clima(localidade)
         except Exception as e:
             print(f'Erro: {e}.')
 
     @staticmethod
     def exibir_menu():
-        Menu._mostrar_mensagem_inicial()
-        Menu._mostrar_opcoes()
+        menu = Menu()
+        menu._mostrar_mensagem_inicial()
+        menu._mostrar_opcoes()

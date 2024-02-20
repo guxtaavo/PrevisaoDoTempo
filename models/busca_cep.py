@@ -2,12 +2,11 @@ import requests
 
 class Cep:
 
-    def _solicita_cep():
+    def _solicita_cep(self) -> str:
         cep = str(input('Porfavor, digite o seu cep: '))
         return cep
 
-
-    def _valida_cep(cep):
+    def _valida_cep(self, cep) -> bool:
         if not (len(cep) == 8):
             return False
         else:
@@ -15,9 +14,10 @@ class Cep:
 
     @staticmethod
     def busca_cep():
-        cep = Cep._solicita_cep()
+        cep_instancia = Cep()
+        cep = cep_instancia._solicita_cep()
         
-        if not Cep._valida_cep(cep):
+        if not cep_instancia._valida_cep(cep):
             return 'Cep inválido'
         
         url = f'https://viacep.com.br/ws/{cep}/json/'
@@ -29,5 +29,3 @@ class Cep:
                 return f'Erro na requisição'
         except Exception as e:
             return f'Erro na requisição: {e}'
-        
-        
