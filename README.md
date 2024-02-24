@@ -29,7 +29,8 @@ Para utilizar este projeto, siga as instruções abaixo:
 3. Certifique-se que você tem a linguagem Python atualizada.
 4. Crie um ambiente virtual na pasta do projeto para instalar os pacotes.
 5. Certifique-se de conferir o requierements.txt para obter as pacotes necessários (Utilize o pip install -r requirements.txt)
-6. Execute o projeto e explore as funcionalidades implementadas.
+6. É necessário ter uma API KEY no open weather e adicionar no seu arquivo .env que estará na raiz da pasta, você deverá utilizar um padrão como exemplificado no arquivo .env.share
+7. Execute o projeto e explore as funcionalidades implementadas.
 
 ## Contribuições
 
