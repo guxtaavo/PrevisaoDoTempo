@@ -14,20 +14,11 @@ O principal propósito deste projeto é oferecer uma oportunidade de prática e 
 O projeto foi desenvolvido utilizando as seguintes tecnologias e linguagens:
 
 - Linguagem de Programação: Python
-```
-- Ferramentas de Desenvolvimento:
-```
-
 ## Funcionalidades
 
 O projeto possui as seguintes funcionalidades principais:
 
 1. Obtenção do CEP utilizando a API viacep, e com a obtenção do endereço buscar a previsão do tempo no momento na cidade utilizando o openweather.
-```
- 2. [Descrição da funcionalidade 2]
-# 3. [Descrição da funcionalidade 3]
-```
-
 
 ## Como Utilizar
 
@@ -48,10 +39,5 @@ Contribuições são bem-vindas! Se você identificar bugs, problemas de seguran
 
 Gustavo Nunes Lopes
 
-```
-## Licença
-
-# Este projeto está licenciado sob a [inserir licença utilizada] - veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
-```
 ---
 **Nota:** Este README serve como um guia básico. Sinta-se à vontade para expandi-lo ou adaptá-lo conforme necessário para refletir melhor o projeto.
